@@ -8,3 +8,15 @@ page .container {
 page .container .container-swiper {
   height: 100%;
 }
+page .container .container-swiper .pic {
+  height: 100%;
+  width: 100%;
+}
+page .container .container-swiper .entry {
+  position: absolute;
+  bottom: 60rpx;
+  left: 0;
+  right: 0;
+  width: 200rpx;
+  font-size: 26rpx;
+}

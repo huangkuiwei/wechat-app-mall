@@ -1,8 +1,20 @@
 <view class="container">
   <!-- 轮播图：默认高度 150px -->
-  <swiper class="container-swiper">
+  <swiper class="container-swiper" indicator-dots="{{true}}" indicator-active-color="#ffffff">
     <swiper-item class="container-swiper-item" wx:for="{{bannerList}}" wx:key="id">
-      <image class="container-swiper-item-img" src="{{item.picUrl}}" />
+      <!-- image组件默认宽度320px、高度240px -->
+      <image class="pic" src="{{item.picUrl}}" data-index="{{index}}" bind:tap="tapBanner" />
+
+      <!-- 进入店铺按钮 -->
+      <button
+        class="entry"
+        type="primary"
+        size="mini"
+        wx:if="{{index === bannerList.length - 1}}"
+        bind:tap="jumpIndex"
+      >
+        进入店铺
+      </button>
     </swiper-item>
   </swiper>
 </view>
