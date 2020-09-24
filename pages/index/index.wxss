@@ -38,7 +38,6 @@
 .container .banner .banner-search .buy-list-swiper .buy-list-swiper-item .data {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   display: flex;
   align-items: center;
 }
@@ -47,4 +46,9 @@
   height: 32rpx;
   border-radius: 50%;
   margin-right: 6rpx;
+}
+.container .banner .banner-search .buy-list-swiper .buy-list-swiper-item .data .name {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

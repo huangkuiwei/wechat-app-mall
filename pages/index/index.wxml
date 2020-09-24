@@ -18,7 +18,7 @@
             <image class="head" src="{{item.avatarUrl}}" />
             <text>{{item.nick}}</text>
             <text style="margin: 0 6rpx">购买了</text>
-            <text>{{item.goodsName}}</text>
+            <text class="name">{{item.goodsName}}</text>
           </view>
         </swiper-item>
       </swiper>
