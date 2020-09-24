@@ -1,3 +1,8 @@
 <view class="container">
-  start
+  <!-- 轮播图：默认高度 150px -->
+  <swiper class="container-swiper">
+    <swiper-item class="container-swiper-item" wx:for="{{bannerList}}" wx:key="id">
+      <image class="container-swiper-item-img" src="{{item.picUrl}}" />
+    </swiper-item>
+  </swiper>
 </view>
