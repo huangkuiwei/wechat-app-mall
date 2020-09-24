@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+}
+.container .banner .banner-swiper {
+  height: 375rpx;
+}
+.container .banner .banner-swiper .banner-swiper-item .pic {
+  width: 100%;
+}
+.container .banner .banner-search {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+  margin: 0 auto;
+}
+.container .banner .banner-search .search-input {
+  width: 100%;
+  border: 1rpx solid #e3e3e3;
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.8);
+  height: 66rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+.container .banner .banner-search .buy-list-swiper {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border-radius: 32rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+}
+.container .banner .banner-search .buy-list-swiper .buy-list-swiper-item .data {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+}
+.container .banner .banner-search .buy-list-swiper .buy-list-swiper-item .data .head {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  margin-right: 6rpx;
+}

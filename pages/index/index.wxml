@@ -1,3 +1,27 @@
 <view class="container">
-  index
+  <view class="banner">
+    <!-- 轮播图 -->
+    <swiper class="banner-swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+      <swiper-item class="banner-swiper-item" wx:for="{{bannerList}}" wx:key="id">
+        <image class="pic" mode="widthFix" src="{{item.picUrl}}" />
+      </swiper-item>
+    </swiper>
+
+    <!-- 搜索 -->
+    <view class="banner-search">
+      <input class="search-input" placeholder="输入搜索关键词" />
+
+      <!-- 滚动条 -->
+      <swiper class="buy-list-swiper" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}">
+        <swiper-item class="buy-list-swiper-item" wx:for="{{buyList}}" wx:key="uid">
+          <view class="data">
+            <image class="head" src="{{item.avatarUrl}}" />
+            <text>{{item.nick}}</text>
+            <text style="margin: 0 6rpx">购买了</text>
+            <text>{{item.goodsName}}</text>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
 </view>
