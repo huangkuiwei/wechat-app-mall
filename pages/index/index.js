@@ -3,12 +3,14 @@ const request = require('../../tools/request')
 Page({
   data: {
     bannerList: [],
-    buyList: []
+    buyList: [],
+    discountList: []
   },
 
   onLoad() {
     this.getBannerList()
     this.getBuyList()
+    this.getDiscountList()
   },
 
   /**
@@ -37,6 +39,21 @@ Page({
       .then((data) => {
         this.setData({
           buyList: data
+        })
+      })
+  },
+
+  /**
+   * 获取优惠活动列表
+   */
+  getDiscountList() {
+    request
+      .post('tz/notice/list', {
+        pageSize: 5
+      })
+      .then((data) => {
+        this.setData({
+          discountList: data.dataList
         })
       })
   }

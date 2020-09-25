@@ -63,4 +63,39 @@
       }
     }
   }
+
+  .discount {
+    display: flex;
+    align-items: center;
+    border-bottom: 2rpx solid #efeff4;
+    padding: 14rpx 20rpx;
+
+    .icon {
+      height: 40rpx;
+    }
+
+    .discount-swiper {
+      margin: 0 20rpx;
+      height: 50rpx;
+      flex-grow: 1;
+      font-size: 24rpx;
+      color: rgba(255, 0, 0, 0.712);
+
+      swiper-item {
+        display: flex;
+        align-items: center;
+
+        .title {
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .more {
+      font-size: 24rpx;
+    }
+  }
 }

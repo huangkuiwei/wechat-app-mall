@@ -14,14 +14,31 @@
       <!-- 滚动条 -->
       <swiper class="buy-list-swiper" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}">
         <swiper-item class="buy-list-swiper-item" wx:for="{{buyList}}" wx:key="uid">
-          <view class="data">
+          <navigator
+            url="{{'/pages/goods-details/goods-details?goodsId=' + item.goodsId}}"
+            class="data"
+          >
             <image class="head" src="{{item.avatarUrl}}" />
             <text>{{item.nick}}</text>
             <text style="margin: 0 6rpx">购买了</text>
             <text class="name">{{item.goodsName}}</text>
-          </view>
+          </navigator>
         </swiper-item>
       </swiper>
     </view>
+  </view>
+
+  <!-- 优惠通知列表 -->
+  <view class="discount">
+    <image mode="heightFix" class="icon" src="/images/notice.png" />
+
+    <!-- swiper -->
+    <swiper class="discount-swiper" autoplay="{{true}}" vertical="{{true}}" circular="{{true}}">
+      <swiper-item wx:for="{{discountList}}" wx:key="id">
+        <text class="title">{{item.title}}</text>
+      </swiper-item>
+    </swiper>
+
+    <navigator class="more" url="/pages/notice/notice">更多></navigator>
   </view>
 </view>
