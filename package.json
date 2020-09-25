@@ -1,0 +1,22 @@
+{
+  "name": "wechat-app-mall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangkuiwei/wechat-app-mall.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huangkuiwei/wechat-app-mall/issues"
+  },
+  "homepage": "https://github.com/huangkuiwei/wechat-app-mall#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.5.0"
+  }
+}

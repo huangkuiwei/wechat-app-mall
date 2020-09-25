@@ -4,13 +4,15 @@ Page({
   data: {
     bannerList: [],
     buyList: [],
-    discountList: []
+    discountList: [],
+    goodsTypeList: []
   },
 
   onLoad() {
     this.getBannerList()
     this.getBuyList()
     this.getDiscountList()
+    this.getGoodsTypeList()
   },
 
   /**
@@ -53,8 +55,19 @@ Page({
       })
       .then((data) => {
         this.setData({
-          discountList: data.dataList
+          discountList: data.dataList.filter((item) => item.isShow) // 筛选出要展示的
         })
       })
+  },
+
+  /**
+   * 获取服装类型
+   */
+  getGoodsTypeList() {
+    request.get('tz/shop/goods/category/all').then((data) => {
+      this.setData({
+        goodsTypeList: data
+      })
+    })
   }
 })

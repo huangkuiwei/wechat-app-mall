@@ -13,7 +13,7 @@
 
       <!-- 滚动条 -->
       <swiper class="buy-list-swiper" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}">
-        <swiper-item class="buy-list-swiper-item" wx:for="{{buyList}}" wx:key="uid">
+        <swiper-item class="buy-list-swiper-item" wx:for="{{buyList}}" wx:key="orderId">
           <navigator
             url="{{'/pages/goods-details/goods-details?goodsId=' + item.goodsId}}"
             class="data"
@@ -29,7 +29,7 @@
   </view>
 
   <!-- 优惠通知列表 -->
-  <view class="discount">
+  <view class="discount" wx:if="{{discountList.length}}">
     <image mode="heightFix" class="icon" src="/images/notice.png" />
 
     <!-- swiper -->
@@ -41,4 +41,25 @@
 
     <navigator class="more" url="/pages/notice/notice">更多></navigator>
   </view>
+
+  <!-- 服装类型列表 -->
+  <view class="good-list">
+    <navigator
+      class="item"
+      open-type="switchTab"
+      url="/pages/category/category"
+      wx:for="{{goodsTypeList}}"
+      wx:key="id"
+    >
+      <image mode="heightFix" class="icon" src="{{item.icon}}" />
+      <text class="name">{{item.name}}</text>
+    </navigator>
+  </view>
+
+  <!-- 好礼直播 -->
+  <navigator class="zhibo" url="/pages/live/live">
+    <image mode="widthFix" class="pic" src="/images/live.jpg" />
+  </navigator>
+
+  <!-- 限时秒杀 -->
 </view>

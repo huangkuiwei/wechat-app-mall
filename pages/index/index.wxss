@@ -81,3 +81,27 @@
 .container .discount .more {
   font-size: 24rpx;
 }
+.container .good-list {
+  margin-top: 50rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .good-list .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin-bottom: 40rpx;
+}
+.container .good-list .item .icon {
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+.container .good-list .item .name {
+  font-size: 24rpx;
+}
+.container .zhibo .pic {
+  width: 100%;
+}

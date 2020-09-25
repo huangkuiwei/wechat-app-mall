@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/category/category",
     "pages/goods-details/goods-details",
-    "pages/notice/notice"
+    "pages/notice/notice",
+    "pages/live/live"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -35,6 +36,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
