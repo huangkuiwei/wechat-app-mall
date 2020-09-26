@@ -105,3 +105,30 @@
 .container .zhibo .pic {
   width: 100%;
 }
+.container .seckill-goods {
+  background: #f6f6f6;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.container .seckill-goods .item {
+  display: flex;
+  align-items: center;
+}
+.container .seckill-goods .item .goods-pic {
+  width: 40%;
+  border-radius: 10px;
+}
+.container .seckill-goods .item .detail {
+  width: 60%;
+  padding: 0 20rpx;
+}
+.container .seckill-goods .item .detail .name {
+  color: #333;
+  font-size: 28rpx;
+}
+.container .seckill-goods .item .detail .time {
+  padding: 16rpx 0;
+  font-size: 24rpx;
+  background: chartreuse;
+}

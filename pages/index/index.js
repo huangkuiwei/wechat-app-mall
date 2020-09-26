@@ -5,7 +5,9 @@ Page({
     bannerList: [],
     buyList: [],
     discountList: [],
-    goodsTypeList: []
+    goodsTypeList: [],
+    seckillGoodsList: [],
+    countDownTime: null
   },
 
   onLoad() {
@@ -13,6 +15,7 @@ Page({
     this.getBuyList()
     this.getDiscountList()
     this.getGoodsTypeList()
+    this.getSeckillGoodsList()
   },
 
   /**
@@ -69,5 +72,20 @@ Page({
         goodsTypeList: data
       })
     })
+  },
+
+  /**
+   * 获取秒杀商品列表
+   */
+  getSeckillGoodsList() {
+    request
+      .post('tz/shop/goods/list', {
+        miaosha: true
+      })
+      .then((data) => {
+        this.setData({
+          seckillGoodsList: data
+        })
+      })
   }
 })

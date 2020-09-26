@@ -7,6 +7,10 @@
     "pages/notice/notice",
     "pages/live/live"
   ],
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider/index",
+    "van-count-down": "@vant/weapp/count-down/index"
+  },
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
