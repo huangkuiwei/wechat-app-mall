@@ -114,6 +114,7 @@
 .container .seckill-goods .item {
   display: flex;
   align-items: center;
+  margin-bottom: 30rpx;
 }
 .container .seckill-goods .item .goods-pic {
   width: 40%;
@@ -126,9 +127,65 @@
 .container .seckill-goods .item .detail .name {
   color: #333;
   font-size: 28rpx;
+  line-height: 1.6;
 }
 .container .seckill-goods .item .detail .time {
-  padding: 16rpx 0;
+  margin: 16rpx 0;
+  padding: 10rpx 0;
   font-size: 24rpx;
-  background: chartreuse;
+  background: #e64340;
+  border-radius: 20rpx;
+  padding-left: 14rpx;
+}
+.container .seckill-goods .item .detail .time .van-count-down {
+  color: #ffffff !important;
+}
+.container .seckill-goods .item .detail .price {
+  display: flex;
+  align-items: center;
+}
+.container .seckill-goods .item .detail .price .min-price {
+  color: #e64340;
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+.container .seckill-goods .item .detail .price .original-price {
+  text-decoration: line-through;
+  color: #666666;
+  font-size: 24rpx;
+  flex-grow: 1;
+}
+.container .seckill-goods .item .detail .price .buy {
+  background: #e64340;
+  color: #ffffff;
+  padding: 16rpx 30rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+}
+.container .hot-shop {
+  padding: 30rpx 30rpx 0;
+  background: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .hot-shop .item {
+  width: 48%;
+  background: #ffffff;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.container .hot-shop .item .pic {
+  width: 100%;
+  border-radius: 20rpx;
+}
+.container .hot-shop .item .info {
+  padding: 16rpx;
+  font-size: 24rpx;
+}
+.container .hot-shop .item .info .name {
+  margin-bottom: 30rpx;
+}
+.container .hot-shop .item .info .price {
+  color: #e64340;
 }

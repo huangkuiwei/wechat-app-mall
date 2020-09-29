@@ -1,5 +1,6 @@
 .container {
   position: relative;
+
   .banner {
     .banner-swiper {
       height: 375rpx;
@@ -139,6 +140,7 @@
     .item {
       display: flex;
       align-items: center;
+      margin-bottom: 30rpx;
 
       .goods-pic {
         width: 40%;
@@ -152,12 +154,80 @@
         .name {
           color: #333;
           font-size: 28rpx;
+          line-height: 1.6;
         }
 
         .time {
-          padding: 16rpx 0;
+          margin: 16rpx 0;
+          padding: 10rpx 0;
           font-size: 24rpx;
-          background: chartreuse;
+          background: #e64340;
+          border-radius: 20rpx;
+          padding-left: 14rpx;
+
+          // 组件开启了 addGlobalClass: true
+          .van-count-down {
+            color: #ffffff !important;
+          }
+        }
+
+        .price {
+          display: flex;
+          align-items: center;
+
+          .min-price {
+            color: #e64340;
+            font-size: 40rpx;
+            margin-right: 20rpx;
+          }
+
+          .original-price {
+            text-decoration: line-through;
+            color: #666666;
+            font-size: 24rpx;
+            flex-grow: 1;
+          }
+
+          .buy {
+            background: #e64340;
+            color: #ffffff;
+            padding: 16rpx 30rpx;
+            border-radius: 30rpx;
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .hot-shop {
+    padding: 30rpx 30rpx 0;
+    background: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 48%;
+      background: #ffffff;
+      border-radius: 20rpx;
+      margin-bottom: 30rpx;
+
+      .pic {
+        width: 100%;
+        border-radius: 20rpx;
+      }
+
+      .info {
+        padding: 16rpx;
+        font-size: 24rpx;
+
+        .name {
+          margin-bottom: 30rpx;
+        }
+
+        .price {
+          color: #e64340;
         }
       }
     }

@@ -7,7 +7,7 @@ Page({
     discountList: [],
     goodsTypeList: [],
     seckillGoodsList: [],
-    countDownTime: null
+    hotShopList: []
   },
 
   onLoad() {
@@ -16,10 +16,11 @@ Page({
     this.getDiscountList()
     this.getGoodsTypeList()
     this.getSeckillGoodsList()
+    this.getHotShopList()
   },
 
   /**
-   * 获取轮播图数据
+   * 获取 banner 轮播图数据
    */
   getBannerList() {
     request
@@ -64,7 +65,7 @@ Page({
   },
 
   /**
-   * 获取服装类型
+   * 获取商品类型
    */
   getGoodsTypeList() {
     request.get('tz/shop/goods/category/all').then((data) => {
@@ -83,8 +84,29 @@ Page({
         miaosha: true
       })
       .then((data) => {
+        // 处理数据
+        data.forEach((item) => {
+          // 添加倒计时数据用于页面显示
+          item.countDownTime = new Date(item.dateEnd) - new Date(item.dateStart)
+        })
+
         this.setData({
           seckillGoodsList: data
+        })
+      })
+  },
+
+  /**
+   * 获取爆品商品列表
+   */
+  getHotShopList() {
+    request
+      .get('tz/shop/goods/list', {
+        recommendStatus: 1
+      })
+      .then((data) => {
+        this.setData({
+          hotShopList: data
         })
       })
   }

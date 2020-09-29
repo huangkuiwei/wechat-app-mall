@@ -66,14 +66,37 @@
     <text>限时秒杀</text>
   </van-divider>
 
-  <!-- 限时秒杀抢购 TODO -->
+  <!-- 限时秒杀商品 -->
   <view class="seckill-goods">
     <view class="item" wx:for="{{seckillGoodsList}}" wx:key="id">
       <image mode="widthFix" class="goods-pic" src="{{item.pic}}" />
+
       <view class="detail">
         <view class="name">{{item.name}}</view>
-        <vant-count-down time="{{countDownTime}}" format="剩余：HH 时 mm 分 ss 秒" />
-        <view class="price">￥236</view>
+        <view class="time">
+          <van-count-down time="{{item.countDownTime}}" format="剩余：HH 时 mm 分 ss 秒" />
+        </view>
+        <view class="price">
+          <text class="min-price">￥{{item.minPrice}}</text>
+          <text class="original-price">￥{{item.originalPrice}}</text>
+          <text class="buy">立即抢购</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 爆品推荐 -->
+  <van-divider content-position="center">
+    <text>爆品推荐</text>
+  </van-divider>
+
+  <!-- 爆品推荐商品 -->
+  <view class="hot-shop">
+    <view class="item" wx:for="{{hotShopList}}" wx:key="id">
+      <image class="pic" mode="widthFix" src="{{item.pic}}" />
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="price">￥{{item.minPrice}}</view>
       </view>
     </view>
   </view>
