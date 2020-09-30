@@ -100,4 +100,24 @@
       </view>
     </view>
   </view>
+
+  <!-- 疯狂砍价 -->
+  <view class="kanjia">
+    <view class="title">
+      疯狂砍价
+    </view>
+
+    <view class="shop-list">
+      <view class="item" wx:for="{{kanjiaShopList}}" wx:key="id">
+        <van-card
+          title="{{item.name}}"
+          thumb="{{item.pic}}"
+          desc="{{item.characteristic}}"
+          mode="widthFix"
+        >
+          <view slot="tags"></view>
+        </van-card>
+      </view>
+    </view>
+  </view>
 </view>

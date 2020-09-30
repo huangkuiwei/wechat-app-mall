@@ -114,6 +114,8 @@
 .container .seckill-goods .item {
   display: flex;
   align-items: center;
+}
+.container .seckill-goods .item:not(:last-child) {
   margin-bottom: 30rpx;
 }
 .container .seckill-goods .item .goods-pic {
@@ -188,4 +190,17 @@
 }
 .container .hot-shop .item .info .price {
   color: #e64340;
+}
+.container .kanjia .title {
+  margin-bottom: 20rpx;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.container .kanjia .shop-list {
+  box-sizing: border-box;
+}
+.container .kanjia .shop-list .item {
+  display: flex;
+  align-items: center;
 }

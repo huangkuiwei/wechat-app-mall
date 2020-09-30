@@ -140,7 +140,9 @@
     .item {
       display: flex;
       align-items: center;
-      margin-bottom: 30rpx;
+      &:not(:last-child) {
+        margin-bottom: 30rpx;
+      }
 
       .goods-pic {
         width: 40%;
@@ -229,6 +231,24 @@
         .price {
           color: #e64340;
         }
+      }
+    }
+  }
+
+  .kanjia {
+    .title {
+      margin-bottom: 20rpx;
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 30rpx;
+      font-weight: bold;
+    }
+
+    .shop-list {
+      box-sizing: border-box;
+
+      .item {
+        display: flex;
+        align-items: center;
       }
     }
   }

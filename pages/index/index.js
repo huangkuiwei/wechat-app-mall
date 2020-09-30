@@ -7,7 +7,8 @@ Page({
     discountList: [],
     goodsTypeList: [],
     seckillGoodsList: [],
-    hotShopList: []
+    hotShopList: [],
+    kanjiaShopList: []
   },
 
   onLoad() {
@@ -17,6 +18,7 @@ Page({
     this.getGoodsTypeList()
     this.getSeckillGoodsList()
     this.getHotShopList()
+    this.getKanjiaShopList()
   },
 
   /**
@@ -107,6 +109,31 @@ Page({
       .then((data) => {
         this.setData({
           hotShopList: data
+        })
+      })
+  },
+
+  getKanjiaShopList() {
+    request
+      .post('tz/shop/goods/list', {
+        kanjia: true
+      })
+      .then((data) => {
+        // 获取
+        const promiseList = data.map((item) => {
+          return request.get('tz/shop/goods/kanjia/set/v2', {
+            goodsId: item.id
+          })
+        })
+
+        Promise.all(promiseList).then((dataList) => {
+          dataList.forEach((item, index) => {
+            data[index].process = item[0]
+          })
+        })
+
+        this.setData({
+          kanjiaShopList: data
         })
       })
   }
